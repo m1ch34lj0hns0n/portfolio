@@ -1,0 +1,41 @@
+.aboutContainer {
+    background-color: #232323;
+    text-align: start;
+    padding: 40px 0;
+    color: #fff;
+}
+
+.aboutTitle {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.reedLogo {
+    width: 80px;
+    text-indent: -9999px;
+    display: inline-block;
+    background: url('./reed-logo.svg') no-repeat;
+}
+
+.failing {
+    text-decoration: line-through;
+}
+
+.meContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.meImage {
+    border-radius: 50%;
+}
+
+@media (max-device-width: 480px) {
+    .meImage {
+        margin-bottom: 20px;
+    }
+}
