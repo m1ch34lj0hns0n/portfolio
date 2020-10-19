@@ -28,7 +28,7 @@ const Form = () => {
         })
         .then(response => response.json())
         .then(result => {
-  
+            setFormStatus({success: result.ok});
         });
     };
 
