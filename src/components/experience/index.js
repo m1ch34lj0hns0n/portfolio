@@ -1,28 +1,20 @@
 import React from 'react';
 import Styles from './index.module.css';
 
+import ExperienceCard from '../experienceCard';
 import experiences from './experiences';
 
-const Experience = ({id}) =>  (
-    <section id={id} className={Styles.experienceContainer}>
-        <div className="container">
-            {
-                experiences.map((exp, index) => (
-                    <article key={index} className={[Styles.timelineBlock, 'row'].join(' ')}>
-                        <div className={Styles.timelinePoint} />
-                        <div className={Styles.timelineContent}>
-                            <img src={exp.logo} height="35" width="100" alt={exp.company} />
-                            <h3>{exp.title}</h3>
-                            <small>{`${exp.fromDate} - ${exp.toDate}`}</small>
-                            {exp.description && (
-                                <p dangerouslySetInnerHTML={{__html: exp.description}} />
-                            )}
-                        </div>
-                    </article>
-                ))
-            }
-        </div>
-    </section>
-);
+const Experience = ({id}) => {
+
+    const experienceCards = experiences.map((exp, index) => <ExperienceCard key={index} props={exp} />)
+
+    return (
+        <section id={id} className={Styles.experienceContainer}>
+            <div className="container">
+                {experienceCards}
+            </div>
+        </section>
+    )
+};
 
 export default Experience;
