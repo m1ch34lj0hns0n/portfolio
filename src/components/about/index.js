@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './index.module.css';
 import me from './me.jpg';
 
-const About = () => (
-    <section className={styles.aboutContainer}>
+const About = ({id}) => (
+    <section id={id} className={styles.aboutContainer}>
         <div className="container">
             <div className="row">
                 <div className="col">
@@ -14,6 +14,8 @@ const About = () => (
                 <div className={['col-sm', styles.meContainer].join(' ')}>
                     <img
                         src={me}
+                        width="175"
+                        height="175"
                         className={[styles.meImage, 'mb-4 mb-lg-0'].join(' ')}
                         alt="Mike Johnson, software development engineer"
                     />

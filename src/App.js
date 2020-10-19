@@ -3,18 +3,22 @@ import './App.css';
 
 import Navigation from './components/navigation';
 import Header from './components/header';
-import About from './components/about';
-import Experience from './components/experience';
-import Contact from './components/contact';
+
+import routes from './routes';
 
 function App() {
+
+  const sections = routes.map((route, i) => (
+    <React.Fragment key={route.name}>
+      <route.component id={route.name.toLowerCase()} />
+    </React.Fragment>
+  ));
+
   return (
     <div className="App">
       <Navigation />
       <Header />
-      <About />
-      <Experience />
-      <Contact />
+      {sections}
     </div>
   );
 }

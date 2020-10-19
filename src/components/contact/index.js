@@ -1,6 +1,8 @@
 import React from 'react';
 import Styles from './index.module.css';
 
+import Form from '../form';
+
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import {
@@ -8,8 +10,8 @@ import {
     faGithubSquare
 } from '@fortawesome/free-brands-svg-icons';
 
-const Contact = () => (
-    <section className={Styles.contactContainer}>
+const Contact = ({id}) => (
+    <section id={id} className={Styles.contactContainer}>
         <div className="container">
             <div className="row">
                 <div className="col-sm">
@@ -37,6 +39,9 @@ const Contact = () => (
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div className="col-sm">
+                    <Form />
                 </div>
             </div>
         </div>
